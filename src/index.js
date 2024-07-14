@@ -7,15 +7,18 @@ const customTheme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: "white",
-        color: "rgba(0, 0, 0, 0.9)",
-        fontFamily: "forum, serif"
+        "bg": "#F0F0F0",
+        "color": "rgba(0, 0, 0, 0.9)",
+        "fontFamily": "forum, serif",
+        "fontSize": "10px",
+        "fontWeight": "100",
       },
     },
-    brand: {
-      bg_white: "FFFFFF",
-      bg_gray: "F7F8F9"
-    }
+    colors: {
+      "bg_white": "#FFFFFF",
+      "bg_gray": "#F0F0F0",
+      "body": "rgba(0, 0, 0, 0.9)"
+    },
   },
 });
 
