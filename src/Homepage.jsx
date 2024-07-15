@@ -4,6 +4,7 @@ import { Box, Flex, HStack, Divider, Text, Image } from "@chakra-ui/react";
 import { H1, H2, L1, Body } from "./Fonts";
 import Header from './Header';
 import Footer from './Footer';
+import profile from "./mongo.JPG";
 
 const Homepage = () => {
 
@@ -15,8 +16,8 @@ const Homepage = () => {
     <Header />
     <Box p={"3rem 5rem"} w={'100%'}>
         <Box bg={colors.bg_white} w={'100%'} display={'grid'} gridTemplateColumns={'repeat(3, 1fr)'}>
-            <Image src="./mongo.JPG" alt='profile image' h={'100%'} w={'100%'} gridColumn={'1 / 2'} bg="grey"></Image>
-            <Box h={'100%'} w={'100%'} gridColumn={'2 / 4'} p={"5rem"}>
+            <Image src={profile} alt='profile image' h={'100%'} w={'100%'} gridColumn={'1 / 2'} bg="grey"></Image>
+            <Flex h={'100%'} w={'100%'} gridColumn={'2 / 4'} p={"5rem"} flexDirection={'column'} align={'start'} justify={'center'}>
                 <H2 text="Hello, I'm Kotoe" pb="2rem" />
                 <Body 
                     text="As a software engineer, frontend developer, and UX designer, 
@@ -26,7 +27,7 @@ const Homepage = () => {
                     By crafting intuitive and efficient solutions that prioritize user experience while 
                     ensuring technical feasibility, I deliver enhanced user satisfaction and substantial 
                     value to employers." />
-            </Box>
+            </Flex>
         </Box>
     </Box>
     <Footer />

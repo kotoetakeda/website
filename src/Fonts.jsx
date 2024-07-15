@@ -61,7 +61,7 @@ const Body = ({ text, ...rest }) => {
     );
 };
 
-const ProjectBox = () => {
+const ProjectBox = ({image, alt, ...rest}) => {
     const theme = useTheme();
     return (
         <Flex 
@@ -75,12 +75,13 @@ const ProjectBox = () => {
           justify={'center'}
           p={"3rem"}
           flexDirection={'row'}
+          {...rest}
         >
-            <Flex w={'50%'} h={"100%"}>
+            <Flex w={'60%'} h={"100%"}>
                 <L1 text={'MedConnect'} fontWeight={'900'} />
             </Flex>
-            <Flex w={'50%'} h={"100%"}>
-                <Image src="./mongo.JPG" h={"80%"} bg={theme.colors.body} /> 
+            <Flex w={'40%'} h={"100%"}>
+                <Image src={image} h={"100%"} w={"100%"} alt={alt} /> 
             </Flex>
           <Body />
         </Flex>
