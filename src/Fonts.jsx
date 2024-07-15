@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from "@chakra-ui/react"; 
 import { Text } from "@chakra-ui/react";
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink } from 'react-router-dom';
 
 
 const H1 = ({ text, ...rest }) => {
@@ -30,19 +30,22 @@ const H2 = ({ text, ...rest }) => {
 
 const L1 = ({ link, text, ...rest }) => {
     const theme = useTheme();
+    const activeStyle = {textDecoration: "underline", textUnderlineOffset: "0.5rem"};
+    
     return (
-        <Link to={link}
+        <NavLink to={link}
             textDecoration={'none'}
             _hover={{textDecoration: 'none'}}
             _active={{textDecoration: 'none'}}
             _disabled={{textDecoration: 'none'}}
+            style={({ isActive }) => isActive ? activeStyle : undefined}
         ><Text
             color={theme.styles.colors.body}
             fontSize={"xl"}
             m={'1'}
             {...rest}
             _hover={{textDecoration: "underline", textUnderlineOffset: "0.5rem"}}
-        > {text} </Text></Link>
+        > {text} </Text></NavLink>
     );
 };
 
