@@ -8,7 +8,7 @@ import Footer from './Footer';
 const Resume = () => {
 
   const theme = useTheme();
-  const colors = theme.styles.colors;
+  const colors = theme.colors;
   return (
     <>
     <Header />

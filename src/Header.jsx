@@ -7,19 +7,19 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
 
   const theme = useTheme();
-  const colors = theme.styles.colors;
+  const colors = theme.colors;
 
   return (
     <>
     <Box p={"3rem 10rem"} w={'100%'} bg={colors.bg_white}>
         <H1 text="KOTOE TAKEDA" />
-        <Divider borderColor={theme.styles.colors.body} border={"0.5px solid"} />
+        <Divider borderColor={colors.body} border={"0.5px solid"} />
         <Flex align={'center'} justify={'end'}>
             <HStack spacing={'5'}>
-              <L1 text="About" link="/Homepage" />
-              <L1 text="Projects" link="/Project" />
-              <L1 text="Resume" link="/Resume" />
-              <L1 text="Contact" link="/Contact" /> 
+              <L1 text="About" link="/home" />
+              <L1 text="Projects" link="/project" />
+              <L1 text="Resume" link="/resume" />
+              <L1 text="Contact" link="/contact" /> 
             </HStack>
         </Flex>
     </Box>

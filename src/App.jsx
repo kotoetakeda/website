@@ -12,10 +12,10 @@ function App() {
     <ChakraProvider theme={customTheme}>
         <BrowserRouter>
         <Routes>
-            <Route path="/Homepage" element={<Homepage />} />
-            <Route path="/Project" element={<Project />} />
-            <Route path="/Resume" element={<Resume />} />
-            <Route path="/Contact" element={<Contact />} />
+            <Route path="/home" element={<Homepage />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/contact" element={<Contact />} />
         </Routes>
         </BrowserRouter>
     </ChakraProvider>

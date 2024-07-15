@@ -7,18 +7,19 @@ const customTheme = extendTheme({
   styles: {
     global: {
       body: {
-        "bg": "#F0F0F0",
-        "color": "rgba(0, 0, 0, 0.9)",
-        "fontFamily": "forum, serif",
-        "fontSize": "10px",
-        "fontWeight": "100",
+        bg: "#F0F0F0",
+        color: "rgba(0, 0, 0, 0.9)",
+        fontFamily: "forum, serif",
+        fontSize: "10px",
+        fontWeight: "100",
       },
     },
-    colors: {
-      "bg_white": "#FFFFFF",
-      "bg_gray": "#F0F0F0",
-      "body": "rgba(0, 0, 0, 0.9)"
-    },
+  },
+  colors: {
+    bg_white: "#FFFFFF",
+    bg_gray: "#F0F0F0",
+    body: "rgba(0, 0, 0, 0.9)",
+    gradient: "linear-gradient(180deg, #F0F0F0 0%, #FFFFFF 75%)",
   },
 });
 
