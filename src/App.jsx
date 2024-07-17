@@ -6,6 +6,7 @@ import Homepage from './Homepage';
 import Project from './Project';
 import Resume from './Resume';
 import Contact from './Contact';
+import SAQ from './SAQ';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/project" element={<Project />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/saq-assistant" element={<SAQ />} />
         </Routes>
         </BrowserRouter>
     </ChakraProvider>

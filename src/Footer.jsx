@@ -39,7 +39,7 @@ const Footer = () => {
           </Flex>
         </Flex>
         <Flex w={'50%'} justify={'end'}>
-            <Text fontSize={"xs"}> 2024 Kotoe Takeda. All Copyright Reserved.</Text>
+            <Text fontSize={"xs"}> 2024 Kotoe Takeda. All Copyrights Reserved.</Text>
         </Flex>
     </Flex>
     </>

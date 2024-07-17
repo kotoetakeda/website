@@ -28,6 +28,18 @@ const H2 = ({ text, ...rest }) => {
     );
 };
 
+const H3 = ({ text, ...rest }) => {
+    const theme = useTheme();
+    return (
+        <Text
+            color={theme.colors.body}
+            fontSize={"3xl"}
+            my={'1'}
+            {...rest}
+        > {text} </Text>
+    );
+};
+
 const L1 = ({ link, text, ...rest }) => {
     const theme = useTheme();
     
@@ -82,7 +94,7 @@ const Body = ({ text, ...rest }) => {
     );
 };
 
-const Box1 = ({image, alt, ...rest}) => {
+const Box1 = ({image, alt, title, link, ...rest}) => {
     const theme = useTheme();
     return (
         <Flex 
@@ -104,14 +116,14 @@ const Box1 = ({image, alt, ...rest}) => {
                 <Image src={image} h={"100%"} w={"100%"} alt={alt} /> 
             </Flex>
             <Flex w={'53%'} h={"100%"}>
-                <L2 text={'MedConnect'} fontWeight={'900'} />
+                <L2 link={link} text={title} fontWeight={'900'} />
             </Flex>
           <Body />
         </Flex>
     );
 };
 
-const Box2 = ({image, alt, ...rest}) => {
+const Box2 = ({image, alt, title, ...rest}) => {
     const theme = useTheme();
     return (
         <Flex 
@@ -130,7 +142,7 @@ const Box2 = ({image, alt, ...rest}) => {
           {...rest}
         >
             <Flex w={'53%'} h={"100%"}>
-                <L2 text={'MedConnect'} fontWeight={'900'} />
+                <L2 text={title} fontWeight={'900'} />
             </Flex>
             <Flex w={'43%'} h={"100%"}>
                 <Image src={image} h={"100%"} w={"100%"} alt={alt} /> 
@@ -140,4 +152,4 @@ const Box2 = ({image, alt, ...rest}) => {
     );
 };
 
-export { H1, H2, L1, L2, Body, Box1, Box2 };
+export { H1, H2, H3, L1, L2, Body, Box1, Box2 };

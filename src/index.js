@@ -18,6 +18,7 @@ const customTheme = extendTheme({
   colors: {
     bg_white: "#FFFFFF",
     bg_gray: "#F0F0F0",
+    lines: "F0F0F0",
     body: "rgba(0, 0, 0, 0.9)",
     gradient: "linear-gradient(180deg, #F0F0F0 0%, #FFFFFF 75%)",
   },

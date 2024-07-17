@@ -13,7 +13,7 @@ const Header = () => {
     <>
     <Box p={"3rem 10rem"} w={'100%'} bg={colors.bg_white}>
       <Flex justify={'space-between'} align={'baseline'}>
-        <H1 text="KOTOE TAKEDA" />
+      <NavLink to={"/home"}><H1 text="KOTOE TAKEDA" /></NavLink>
         <Flex align={'center'} justify={'end'}>
             <HStack spacing={'5'}>
               <L1 text="About" link="/home" />

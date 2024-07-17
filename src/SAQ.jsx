@@ -1,12 +1,11 @@
 import React from "react";
 import { useTheme } from "@chakra-ui/react"; 
 import { Box, Flex, HStack, Divider, Text, Image } from "@chakra-ui/react";
-import { H1, H2, L1, Body, Box1, Box2 } from "./Fonts";
+import { H1, H2, L1, Body } from "./Fonts";
 import Header from './Header';
 import Footer from './Footer';
-import profile from "./mongo.JPG";
 
-const Project = () => {
+const SAQ = () => {
 
   const theme = useTheme();
   const colors = theme.colors;
@@ -15,10 +14,7 @@ const Project = () => {
     <Header />
     <Box p={"3rem 5rem"} w={'100%'}>
         <Flex bg={colors.bg_white} w={'100%'} height={'fit-content'} py={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
-          <H1 text="Projects Gallery" pb={"3rem"}/>
-          <Box1 image={profile} alt="temporary" width="80%" title="SAQ Assistant" link="/saq-assistant" />
-          <Box2 image={profile} alt="temporary" width="80%" title="360Med" />
-          <Box1 image={profile} alt="temporary" width="80%" title="Healthcare Technology" />
+          <H1 text="SAQ Assistant" pb={"3rem"}/>
         </Flex>
     </Box>
     <Footer />
@@ -26,4 +22,4 @@ const Project = () => {
   );
 }
 
-export default Project;
+export default SAQ;
