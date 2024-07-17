@@ -12,7 +12,11 @@ const Resume = () => {
   return (
     <>
     <Header />
-    <Flex>Hi</Flex>
+    <Box p={"3rem 5rem"} w={'100%'}>
+        <Flex bg={colors.bg_white} w={'100%'} height={'fit-content'} py={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
+          <H1 text="Resume" pb={"3rem"}/>
+        </Flex>
+    </Box>
     <Footer />
     </>
   );
