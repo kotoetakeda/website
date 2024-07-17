@@ -18,7 +18,7 @@ const Header = () => {
             <HStack spacing={'5'}>
               <L1 text="About" link="/home" />
               <L1 text="Projects" link="/project" />
-              <L1 text="Resume" link="/resume" />
+              <L1 text="CV" link="/cv" />
               <L1 text="Contact" link="/contact" /> 
             </HStack>
         </Flex>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "@chakra-ui/react"; 
-import { Text, Flex, Image } from "@chakra-ui/react";
+import { Text, Flex, Image, Box } from "@chakra-ui/react";
 import { BrowserRouter as Router, NavLink } from 'react-router-dom';
 
 
@@ -152,4 +152,20 @@ const Box2 = ({image, alt, title, ...rest}) => {
     );
 };
 
-export { H1, H2, H3, L1, L2, Body, Box1, Box2 };
+const CVBlock = ({company, location, position, time, description, ...rest}) => {
+    return (
+        <Box display={'grid'} gridTemplateColumns={'repeat(2, 35% 65%)'}>
+            <Flex borderRight={'1px solid'} borderRightColor={'colors.lines'} p={"1rem"} justify={'right'} align={'top'} flexDirection={'column'} textAlign={'right'}>
+                <L1 text={company} fontWeight={'700'}/>
+                <Body text={location} />
+            </Flex>
+            <Flex mt={"6rem"} mb={"1rem"} p={"1rem"} align={'top'} flexDirection={'column'}>
+                <Body text={position} fontWeight={'700'} />
+                <Text fontSize={'md'} m={'1'} >{time}</Text>
+                <Box my={'5'} mx={'1'} fontSize={'xl'}>{description}</Box>
+            </Flex>
+        </Box>
+    )
+}
+
+export { H1, H2, H3, L1, L2, Body, Box1, Box2, CVBlock };
