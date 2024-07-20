@@ -16,11 +16,13 @@ const customTheme = extendTheme({
     },
   },
   colors: {
-    bg_white: "#FFFFFF",
-    bg_gray: "#F0F0F0",
-    lines: "F0F0F0",
+    white: "#F5F5F5",
+    gray: "#F0F0F0",
+    cyan: "#C2EDEA",
+    mauve: "#DED3DE",
+    navy: "#454447",
     body: "rgba(0, 0, 0, 0.9)",
-    gradient: "linear-gradient(180deg, #F0F0F0 0%, #FFFFFF 75%)",
+    gradient: "linear-gradient(45deg, #C2EDEA 0%, #DED3DE 95%)",
   },
 });
 

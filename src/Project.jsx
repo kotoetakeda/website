@@ -13,8 +13,8 @@ const Project = () => {
   return (
     <>
     <Header />
-    <Box p={"3rem 5rem"} w={'100%'}>
-        <Flex bg={colors.bg_white} w={'100%'} height={'fit-content'} py={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
+    <Box p={"3rem 5rem"} w={'100%'} bg={colors.gradient}>
+        <Flex bg={colors.white} w={'100%'} height={'fit-content'} py={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
           <H1 text="Projects Gallery" pb={"3rem"}/>
           <Box1 image={profile} alt="temporary" width="80%" title="SAQ Assistant" link="/saq-assistant" />
           <Box2 image={profile} alt="temporary" width="80%" title="360Med" />

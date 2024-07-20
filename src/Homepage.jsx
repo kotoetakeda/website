@@ -14,8 +14,8 @@ const Homepage = () => {
   return (
     <>
     <Header />
-    <Box p={"3rem 5rem"} w={'100%'}>
-        <Box bg={colors.bg_white} w={'100%'} display={'grid'} gridTemplateColumns={'repeat(3, 1fr)'} h={'fit-content'}>
+    <Box p={"3rem 5rem"} w={'100%'} bg={colors.gradient}>
+        <Box bg={colors.white} w={'100%'} display={'grid'} gridTemplateColumns={'repeat(3, 1fr)'} h={'fit-content'}>
             <Image src={profile} alt='profile image' h={'auto'} w={'auto'} gridColumn={'1 / 2'} bg="grey"></Image>
             <Flex h={'100%'} w={'100%'} gridColumn={'2 / 4'} p={"5rem"} flexDirection={'column'} align={'start'} justify={'center'}>
                 <H2 text="Hello, I'm Kotoe" pb="2rem" />

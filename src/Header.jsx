@@ -11,9 +11,14 @@ const Header = () => {
 
   return (
     <>
-    <Box p={"3rem 10rem"} w={'100%'} bg={colors.bg_white}>
+    <Box p={"3rem 10rem"} w={'100%'} bg={colors.white}>
       <Flex justify={'space-between'} align={'baseline'}>
-      <NavLink to={"/home"}><H1 text="KOTOE TAKEDA" /></NavLink>
+        <NavLink to={"/home"} textDecoration="none">
+          <H1 text="KOTOE TAKEDA" color={colors.body}
+            _hover={{bgGradient:"linear(to-r, #C2EDEA, #DED3DE)", bgClip:"text"}}
+            
+          />
+        </NavLink>
         <Flex align={'center'} justify={'end'}>
             <HStack spacing={'5'}>
               <L1 text="About" link="/home" />

@@ -12,10 +12,10 @@ const CV = () => {
   return (
     <>
     <Header />
-    <Box p={"3rem 5rem"} w={'100%'}>
-        <Flex bg={colors.bg_white} w={'100%'} height={'fit-content'} py={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
+    <Box p={"3rem 5rem"} w={'100%'} bg={colors.gradient}>
+        <Flex bg={colors.white} w={'100%'} height={'fit-content'} py={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
           <H1 text="Curriculum Vitae" pb={"3rem"} />
-          <Box w={"90%"} bg={colors.bg_gray} p={"2rem"}>
+          <Box w={"90%"} bg={colors.gray} p={"2rem"}>
             <H3 text={'EDUCATION'} mb={"2rem"} />
             <CVBlock
               company={"Georgia Institute of Technology"} 
@@ -39,7 +39,7 @@ const CV = () => {
                 </UnorderedList>
               }/>
           </Box>
-          <Box w={"90%"} bg={colors.bg_gray} p={"2rem"} mt={"4rem"}>
+          <Box w={"90%"} bg={colors.gray} p={"2rem"} mt={"4rem"}>
             <H3 text={'WORK EXPERIENCES'} mb={"2rem"}/>
             <CVBlock
               company={"Insight Enterprises"} 
@@ -63,11 +63,11 @@ const CV = () => {
               time={'Jan 2024 - May 2024'} 
               description={
                 <UnorderedList>
-                  <ListItem>Spearheading the frontend team in the development of a new client-requested feature 
-                            that works with multi-page interaction, database, and the creation of new user interface 
-                            on ML model training and data analysis pages</ListItem>
-                  <ListItem>Migrating current framework used in the front-end (JS and Flask+HTML) to React based framework 
-                            with aim to increase efficiency and flexibility for developers</ListItem>
+                  <ListItem>Spearheaded the frontend team in the development of a new client-requested feature that works 
+                            with multi-page interaction, database, and the creation of new user interface on ML model training 
+                            and data analysis pages</ListItem>
+                  <ListItem>Migrated current framework used in the front-end (JS and Flask+HTML) to React based framework with 
+                            aim to increase efficiency and flexibility for developers</ListItem>
                   <ListItem>Utilized PyTest and Cypress to write end-to-end tests and unit tests</ListItem>
                   <ListItem>Enhanced performance of the cloud-based software platform by refactoring code using Javascript, 
                             Python (pandas, numpy), and Flask+HTML</ListItem>

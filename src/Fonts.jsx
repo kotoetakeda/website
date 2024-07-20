@@ -100,9 +100,9 @@ const Box1 = ({image, alt, title, link, ...rest}) => {
         <Flex 
           border={'1px solid'}
           borderColor={theme.colors.body} 
-          borderRadius={'25px'}
+          borderRadius={'15px'}
           boxShadow={"0.5px 0.5px 10px #D6D6D6"}
-          bg={theme.colors.bg_white} 
+          bg={theme.colors.white} 
           height={'20rem'}
           align={'center'}
           justify={'center'}
@@ -129,9 +129,9 @@ const Box2 = ({image, alt, title, ...rest}) => {
         <Flex 
           border={'1px solid'}
           borderColor={theme.colors.body} 
-          borderRadius={'25px'}
+          borderRadius={'15px'}
           boxShadow={"0.5px 0.5px 10px #D6D6D6"}
-          bg={theme.colors.bg_white} 
+          bg={theme.colors.white} 
           height={'20rem'}
           align={'center'}
           justify={'center'}
@@ -153,9 +153,10 @@ const Box2 = ({image, alt, title, ...rest}) => {
 };
 
 const CVBlock = ({company, location, position, time, description, ...rest}) => {
+    const theme = useTheme();
     return (
         <Box display={'grid'} gridTemplateColumns={'repeat(2, 35% 65%)'}>
-            <Flex borderRight={'1px solid'} borderRightColor={'colors.lines'} p={"1rem"} justify={'right'} align={'top'} flexDirection={'column'} textAlign={'right'}>
+            <Flex borderRight={'1px solid'} borderRightColor={theme.colors.navy} p={"1rem"} justify={'right'} align={'top'} flexDirection={'column'} textAlign={'right'}>
                 <L1 text={company} fontWeight={'700'}/>
                 <Body text={location} />
             </Flex>

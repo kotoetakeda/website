@@ -12,9 +12,10 @@ const SAQ = () => {
   return (
     <>
     <Header />
-    <Box p={"3rem 5rem"} w={'100%'}>
-        <Flex bg={colors.bg_white} w={'100%'} height={'fit-content'} py={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
+    <Box p={"3rem 5rem"} w={'100%'} bg={colors.gradient}>
+        <Flex bg={colors.white} w={'100%'} height={'fit-content'} py={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
           <H1 text="SAQ Assistant" pb={"3rem"}/>
+          <Body text={"\"We've been waiting for a tool like this for so long! This will significantly boost our productivity!\"     - user"}/>
         </Flex>
     </Box>
     <Footer />
