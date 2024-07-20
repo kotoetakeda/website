@@ -1,16 +1,31 @@
 import React from "react";
 import { useTheme, Box, Flex, UnorderedList, ListItem, Wrap } from "@chakra-ui/react";
-import { H1, H3, CVBlock, TooltipIcon } from "./Custom";
+import { H1, H3, Body, CVBlock, SvgIcon, ReactIcon } from "./Custom";
 import Header from './Header';
 import Footer from './Footer';
-import { AiOutlinePython } from "react-icons/ai";
-import { SiJavascript, SiBootstrap, SiChakraui, SiMysql, SiCplusplus, SiC, SiFlask, SiTypescript, SiTableau, SiMural, SiJira, SiCodepen, SiD3Dotjs } from "react-icons/si";
-import { RiJavaLine, RiReactjsFill } from "react-icons/ri";
-import { PiFileHtml } from "react-icons/pi";
-import { IoLogoCss3, IoLogoAngular } from "react-icons/io";
-import { FaFigma, FaAws, FaDocker } from "react-icons/fa";
+import { SiFlask, SiMural, SiCodepen } from "react-icons/si";
 import { CgMaze } from "react-icons/cg";
-import { FaNode } from "react-icons/fa6";
+import { ReactComponent as Next } from './icons/nextjs-icon.svg';
+import { ReactComponent as ReactSvg } from './icons/react.svg';
+import { ReactComponent as Node } from './icons/nodejs.svg';
+import { ReactComponent as Angular } from './icons/angular-icon.svg';
+import { ReactComponent as AWS } from './icons/aws.svg';
+import { ReactComponent as Bootstrap } from './icons/bootstrap.svg';
+import { ReactComponent as Cplusplus } from './icons/c-plusplus.svg';
+import { ReactComponent as C } from './icons/c.svg';
+import { ReactComponent as CSS } from './icons/css-3.svg';
+import { ReactComponent as D3 } from './icons/d3.svg';
+import { ReactComponent as Docker } from './icons/docker-icon.svg';
+import { ReactComponent as Figma } from './icons/figma.svg';
+import { ReactComponent as HTML } from './icons/html-5.svg';
+import { ReactComponent as Java } from './icons/java.svg';
+import { ReactComponent as JS } from './icons/javascript.svg';
+import { ReactComponent as Jira } from './icons/jira.svg';
+import { ReactComponent as MySQL } from './icons/mysql-icon.svg';
+import { ReactComponent as Python } from './icons/python.svg';
+import { ReactComponent as Swift } from './icons/swift.svg';
+import { ReactComponent as Tableau } from './icons/tableau-icon.svg';
+import { ReactComponent as Typescript } from './icons/typescript-icon.svg';
 
 const CV = () => {
   const theme = useTheme();
@@ -25,35 +40,46 @@ const CV = () => {
           
           <Box w={"90%"} bg={colors.gray} p={"2rem"}>
             <H3 text={'SKILLS'} mb={"2rem"} />
-            <Wrap spacing={'3'}>
-              <TooltipIcon as={AiOutlinePython} label={'Python'} />
-              <TooltipIcon as={SiJavascript} label={'JavaScript'} />
-              <TooltipIcon as={RiJavaLine} label={'Java'} />
-              <TooltipIcon as={PiFileHtml} label={'HTML'} />
-              <TooltipIcon as={IoLogoCss3} label={'CSS'} />
-              <TooltipIcon as={RiReactjsFill} label={'React'} />
-              <TooltipIcon as={SiBootstrap} label={'Bootstrap'} />
-              <TooltipIcon as={SiChakraui} label={'Chakra UI'} />
-              <TooltipIcon as={IoLogoAngular} label={'Angular'} />
-              <TooltipIcon as={SiMysql} label={'MySQL'} />
-              <TooltipIcon as={SiCplusplus} label={'C++'} />
-              <TooltipIcon as={SiC} label={'C'} />
-              <TooltipIcon as={SiFlask} label={'Flask'} />
-              <TooltipIcon as={SiTypescript} label={'TypeScript'} />
-              <TooltipIcon as={FaFigma} label={'Figma'} />
-              <TooltipIcon as={SiTableau} label={'Tableau'} />
-              <TooltipIcon as={CgMaze} label={'Maze'} />
-              <TooltipIcon as={FaAws} label={'AWS'} />
-              <TooltipIcon as={FaDocker} label={'Docker'} />
-              <TooltipIcon as={SiJira} label={'Jira'} />
-              <TooltipIcon as={FaNode} label={'Node.js'} />
-              <TooltipIcon as={SiMural} label={'Mural'} />
-              <TooltipIcon as={SiCodepen} label={'Codepen'} />
-              <TooltipIcon as={SiD3Dotjs} label={'D3.js'} />
-              
+            <Body text={'Technical Skills: '}/>
+            <Wrap spacing={'3'} my={'5'}>
+              {/* Programming */}
+              <SvgIcon as={Python} label={'Python'} />
+              <SvgIcon as={JS} label={'JavaScript'} />
+              <SvgIcon as={Java} label={'Java'} />
+              <SvgIcon as={Cplusplus} label={'C++'} />
+              <SvgIcon as={C} label={'C'} />
+              <SvgIcon as={Typescript} label={'TypeScript'} />
+              <SvgIcon as={Swift} label={'Swift'} />
+              {/* Web Development */}
+              <SvgIcon as={HTML} label={'HTML'} />
+              <SvgIcon as={CSS} label={'CSS'} />
+              <SvgIcon as={Next} label={'Next.js'} />
+              <SvgIcon as={ReactSvg} label={'React'} />
+              <SvgIcon as={Bootstrap} label={'Bootstrap'} />
+              {/* <SvgIcon as={SiChakraui} label={'Chakra UI'} /> */}
+              <SvgIcon as={Angular} label={'Angular'} />
+              <SvgIcon as={Node} label={'Node.js'} />
+              <SvgIcon as={D3} label={'D3.js'} />
+              <ReactIcon as={SiFlask} label={'Flask'} />
+              {/* Database */}
+              <SvgIcon as={MySQL} label={'MySQL'} /> 
+            </Wrap>
 
-              
-
+            <Body text={'Software and Tools: '}/>
+            <Wrap spacing={'3'} my={'5'}>
+              {/* Cloud */}
+              <SvgIcon as={AWS} label={'AWS'} />
+              {/* DevOps and Tools */}
+              <SvgIcon as={Docker} label={'Docker'} />
+              <SvgIcon as={Jira} label={'Jira'} />
+              {/* Design and Prototyping */}
+              <SvgIcon as={Figma} label={'Figma'} />
+              <ReactIcon as={SiMural} label={'Mural'} />
+              <ReactIcon as={SiCodepen} label={'Codepen'} />
+              {/* Data Visualization */}
+              <SvgIcon as={Tableau} label={'Tableau'} />
+              {/* UX related */}
+              <ReactIcon as={CgMaze} label={'Maze'} />
             </Wrap>
           </Box>
 

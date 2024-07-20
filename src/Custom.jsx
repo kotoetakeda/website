@@ -1,7 +1,7 @@
 import React, { forwardRef, useState, useCallback } from "react";
 import { useTheme } from "@chakra-ui/react"; 
-import { Text, Flex, Box, WrapItem, Tooltip, Icon } from "@chakra-ui/react";
-import { NavLink } from 'react-router-dom';
+import { Text, Flex, Box, WrapItem, Tooltip, Image, Icon } from "@chakra-ui/react";
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const H1 = ({ text, ...rest }) => {
     const theme = useTheme();
@@ -88,49 +88,21 @@ const Body = ({ text, ...rest }) => {
     );
 };
 
-const KeyProjBlock = ({ link, title, themeColor, ...rest }) => {
-    const theme = useTheme();
-    const [hover, setHover] = useState(false);
-    
-    const handleMouseOver = useCallback(() => setHover(true), []);
-    const handleMouseOut = useCallback(() => setHover(false), []);
-    
-    return (
-        <WrapItem>
-            <Flex flexDirection={'column'} justify={'center'} textAlign={'center'} m={'3rem'}
-                onMouseOver={handleMouseOver}
-                onMouseOut={handleMouseOut}
-            >
-                <Flex
-                    width={'73rem'}
-                    height={'20rem'}
-                    bg={theme.colors.gray}
-                    boxShadow={ hover ? "1px 1px 30px" + themeColor : "1px 1px 10px" + themeColor }
-                    align={'center'}
-                    justify={'center'}
-                    mb={'1rem'}
-                    {...rest}
-                >
-                </Flex>
-                <L1 link={link} text={title} fontWeight={'900'} 
-                    color={hover ? theme.colors.body : theme.colors.body_inactive}/>
-            </Flex>
-        </WrapItem>
-    );
-};
-
 const ProjBlock = ({ link, title, themeColor, ...rest }) => {
     const theme = useTheme();
     const [hover, setHover] = useState(false);
+    const navigate = useNavigate();
     
     const handleMouseOver = useCallback(() => setHover(true), []);
     const handleMouseOut = useCallback(() => setHover(false), []);
+    const navigatePage = useCallback(() => navigate(link), [navigate, link]);
 
     return (
         <WrapItem>
             <Flex flexDirection={'column'} justify={'center'} textAlign={'center'} m={'3rem'}
                 onMouseOver={handleMouseOver}
                 onMouseOut={handleMouseOut}
+                onClick={navigatePage}
             >
                 <Flex
                     width={'20rem'}
@@ -171,7 +143,19 @@ const CVBlock = ({ company, location, position, time, description, ...rest }) =>
     );
 };
 
-const TooltipIcon = forwardRef(({ as: As, label, boxSize = 10, ...rest }, ref) => {
+const SvgIcon = forwardRef(({ as: As, label, ...rest }, ref) => {
+    const theme = useTheme();
+
+    return (
+        <WrapItem>
+            <Tooltip label={label} fontSize='xs' color={theme.colors.body}>
+                <Image as={As} alt={label} width={'2rem'} height={'2rem'} {...rest} />
+            </Tooltip>
+        </WrapItem>
+    );
+});
+
+const ReactIcon = forwardRef(({ as: As, label, boxSize = '2rem', ...rest }, ref) => {
     const theme = useTheme();
     
     return (
@@ -185,4 +169,4 @@ const TooltipIcon = forwardRef(({ as: As, label, boxSize = 10, ...rest }, ref) =
     );
 });
 
-export { H1, H2, H3, L1, L2, Body, KeyProjBlock, ProjBlock, CVBlock, TooltipIcon };
+export { H1, H2, H3, L1, L2, Body, ProjBlock, CVBlock, SvgIcon, ReactIcon };

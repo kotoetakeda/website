@@ -10,7 +10,7 @@ const Footer = () => {
   const colors = theme.colors;
   return (
     <>
-    <Flex p={'0.5rem 10rem'} w={'100%'} bg={colors.white} align={'baseline'} position={'fixed'} bottom={'0'}>
+    <Flex p={'0.5rem 10rem'} w={'100%'} bg={colors.white} align={'baseline'}>
         <Flex align={'center'}  justify={'space-between'} w={'50%'}>  
           <Text fontSize={'lg'} fontWeight={'900'}>KOTOE TAKEDA</Text>
           <Flex justify={'space-between'} align={'center'} w={'70%'}>
