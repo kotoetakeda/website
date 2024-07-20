@@ -156,7 +156,7 @@ const CVBlock = ({company, location, position, time, description, ...rest}) => {
     const theme = useTheme();
     return (
         <Box display={'grid'} gridTemplateColumns={'repeat(2, 35% 65%)'}>
-            <Flex borderRight={'1px solid'} borderRightColor={theme.colors.navy} p={"1rem"} justify={'right'} align={'top'} flexDirection={'column'} textAlign={'right'}>
+            <Flex borderRight={'1px solid'} borderRightColor={theme.colors.body} p={"1rem"} justify={'right'} align={'top'} flexDirection={'column'} textAlign={'right'}>
                 <L1 text={company} fontWeight={'700'}/>
                 <Body text={location} />
             </Flex>
