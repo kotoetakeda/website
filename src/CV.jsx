@@ -1,21 +1,63 @@
 import React from "react";
-import { textDecoration, useTheme } from "@chakra-ui/react"; 
-import { Box, Flex, HStack, Divider, Text, Image, UnorderedList, ListItem } from "@chakra-ui/react";
-import { H1, H2, H3, L1, Body, CVBlock } from "./Custom";
+import { useTheme, Box, Flex, UnorderedList, ListItem, Wrap } from "@chakra-ui/react";
+import { H1, H3, CVBlock, TooltipIcon } from "./Custom";
 import Header from './Header';
 import Footer from './Footer';
+import { AiOutlinePython } from "react-icons/ai";
+import { SiJavascript, SiBootstrap, SiChakraui, SiMysql, SiCplusplus, SiC, SiFlask, SiTypescript, SiTableau, SiMural, SiJira, SiCodepen, SiD3Dotjs } from "react-icons/si";
+import { RiJavaLine, RiReactjsFill } from "react-icons/ri";
+import { PiFileHtml } from "react-icons/pi";
+import { IoLogoCss3, IoLogoAngular } from "react-icons/io";
+import { FaFigma, FaAws, FaDocker } from "react-icons/fa";
+import { CgMaze } from "react-icons/cg";
+import { FaNode } from "react-icons/fa6";
 
 const CV = () => {
-
   const theme = useTheme();
   const colors = theme.colors;
+  
   return (
     <>
-    <Header />
-    <Box p={"3rem 5rem"} w={'100%'} bg={colors.gradient}>
+      <Header />
+      <Box p={"3rem 5rem"} w={'100%'} bg={colors.gradient}>
         <Flex bg={colors.white} w={'100%'} height={'fit-content'} py={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
           <H1 text="Curriculum Vitae" pb={"3rem"} />
+          
           <Box w={"90%"} bg={colors.gray} p={"2rem"}>
+            <H3 text={'SKILLS'} mb={"2rem"} />
+            <Wrap spacing={'3'}>
+              <TooltipIcon as={AiOutlinePython} label={'Python'} />
+              <TooltipIcon as={SiJavascript} label={'JavaScript'} />
+              <TooltipIcon as={RiJavaLine} label={'Java'} />
+              <TooltipIcon as={PiFileHtml} label={'HTML'} />
+              <TooltipIcon as={IoLogoCss3} label={'CSS'} />
+              <TooltipIcon as={RiReactjsFill} label={'React'} />
+              <TooltipIcon as={SiBootstrap} label={'Bootstrap'} />
+              <TooltipIcon as={SiChakraui} label={'Chakra UI'} />
+              <TooltipIcon as={IoLogoAngular} label={'Angular'} />
+              <TooltipIcon as={SiMysql} label={'MySQL'} />
+              <TooltipIcon as={SiCplusplus} label={'C++'} />
+              <TooltipIcon as={SiC} label={'C'} />
+              <TooltipIcon as={SiFlask} label={'Flask'} />
+              <TooltipIcon as={SiTypescript} label={'TypeScript'} />
+              <TooltipIcon as={FaFigma} label={'Figma'} />
+              <TooltipIcon as={SiTableau} label={'Tableau'} />
+              <TooltipIcon as={CgMaze} label={'Maze'} />
+              <TooltipIcon as={FaAws} label={'AWS'} />
+              <TooltipIcon as={FaDocker} label={'Docker'} />
+              <TooltipIcon as={SiJira} label={'Jira'} />
+              <TooltipIcon as={FaNode} label={'Node.js'} />
+              <TooltipIcon as={SiMural} label={'Mural'} />
+              <TooltipIcon as={SiCodepen} label={'Codepen'} />
+              <TooltipIcon as={SiD3Dotjs} label={'D3.js'} />
+              
+
+              
+
+            </Wrap>
+          </Box>
+
+          <Box w={"90%"} bg={colors.gray} p={"2rem"} mt={"4rem"}>
             <H3 text={'EDUCATION'} mb={"2rem"} />
             <CVBlock
               company={"Georgia Institute of Technology"} 
@@ -37,10 +79,12 @@ const CV = () => {
                     <ListItem>Artificial Intelligence</ListItem>
                   </UnorderedList>
                 </UnorderedList>
-              }/>
+              }
+            />
           </Box>
+
           <Box w={"90%"} bg={colors.gray} p={"2rem"} mt={"4rem"}>
-            <H3 text={'WORK EXPERIENCES'} mb={"2rem"}/>
+            <H3 text={'WORK EXPERIENCES'} mb={"2rem"} />
             <CVBlock
               company={"Insight Enterprises"} 
               location={'Chandler, AZ (Remote)'} 
@@ -48,14 +92,11 @@ const CV = () => {
               time={'June 2024 - Aug 2024'} 
               description={
                 <UnorderedList>
-                  <ListItem>Spearheaded the user experience design for a generative AI chatbot, improving user 
-                            satisfaction scores by 30% through intuitive interface design and streamlined user flows</ListItem>
-                  <ListItem>Conducted extensive user research and usability testing that lead to a 40% reduction in 
-                            user errors and a 20% increase in task completion rates</ListItem>
+                  <ListItem>Spearheaded the user experience design for a generative AI chatbot, improving user satisfaction scores by 30% through intuitive interface design and streamlined user flows.</ListItem>
+                  <ListItem>Conducted extensive user research and usability testing that led to a 40% reduction in user errors and a 20% increase in task completion rates.</ListItem>
                 </UnorderedList>
               }
             />
-
             <CVBlock
               company={"Matmerize Inc."} 
               location={'Atlanta, GA'} 
@@ -63,18 +104,13 @@ const CV = () => {
               time={'Jan 2024 - May 2024'} 
               description={
                 <UnorderedList>
-                  <ListItem>Spearheaded the frontend team in the development of a new client-requested feature that works 
-                            with multi-page interaction, database, and the creation of new user interface on ML model training 
-                            and data analysis pages</ListItem>
-                  <ListItem>Migrated current framework used in the front-end (JS and Flask+HTML) to React based framework with 
-                            aim to increase efficiency and flexibility for developers</ListItem>
-                  <ListItem>Utilized PyTest and Cypress to write end-to-end tests and unit tests</ListItem>
-                  <ListItem>Enhanced performance of the cloud-based software platform by refactoring code using Javascript, 
-                            Python (pandas, numpy), and Flask+HTML</ListItem>
+                  <ListItem>Spearheaded the frontend team in the development of a new client-requested feature that works with multi-page interaction, database, and the creation of new user interface on ML model training and data analysis pages.</ListItem>
+                  <ListItem>Migrated current framework used in the front-end (JS and Flask+HTML) to React-based framework with aim to increase efficiency and flexibility for developers.</ListItem>
+                  <ListItem>Utilized PyTest and Cypress to write end-to-end tests and unit tests.</ListItem>
+                  <ListItem>Enhanced performance of the cloud-based software platform by refactoring code using JavaScript, Python (pandas, numpy), and Flask+HTML.</ListItem>
                 </UnorderedList>
               }
             />
-
             <CVBlock
               company={"InstaHub"} 
               location={'Philadelphia, PA (Remote)'} 
@@ -82,19 +118,17 @@ const CV = () => {
               time={'June 2022 - Oct 2022'} 
               description={
                 <UnorderedList>
-                  <ListItem>Contributed 1000+ lines of code on AWS Lambda using Python and MySQL for the company’s website 
-                            and mobile app, enabling the implementation of 10 new user features</ListItem>
-                  <ListItem>Optimized RAM usage of a standalone project by 50% through modifying existing Python and MySQL code</ListItem>
-                  <ListItem>Standardized all lambda and gateway responses of REST API endpoints on API Gateway to 
-                            give developers and users uniform client error responses</ListItem>
-                  <ListItem>Maintained and updated a real-time relational database while enhancing the schema design using MySQL</ListItem>
+                  <ListItem>Contributed 1000+ lines of code on AWS Lambda using Python and MySQL for the company’s website and mobile app, enabling the implementation of 10 new user features.</ListItem>
+                  <ListItem>Optimized RAM usage of a standalone project by 50% through modifying existing Python and MySQL code.</ListItem>
+                  <ListItem>Standardized all lambda and gateway responses of REST API endpoints on API Gateway to give developers and users uniform client error responses.</ListItem>
+                  <ListItem>Maintained and updated a real-time relational database while enhancing the schema design using MySQL.</ListItem>
                 </UnorderedList>
               }
             />
           </Box>
         </Flex>
-    </Box>
-    <Footer />
+      </Box>
+      <Footer />
     </>
   );
 }

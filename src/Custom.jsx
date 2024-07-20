@@ -1,6 +1,6 @@
-import React, { useState, useCallback } from "react";
+import React, { forwardRef, useState, useCallback } from "react";
 import { useTheme } from "@chakra-ui/react"; 
-import { Text, Flex, Box, WrapItem } from "@chakra-ui/react";
+import { Text, Flex, Box, WrapItem, Tooltip, Icon } from "@chakra-ui/react";
 import { NavLink } from 'react-router-dom';
 
 const H1 = ({ text, ...rest }) => {
@@ -171,4 +171,18 @@ const CVBlock = ({ company, location, position, time, description, ...rest }) =>
     );
 };
 
-export { H1, H2, H3, L1, L2, Body, KeyProjBlock, ProjBlock, CVBlock };
+const TooltipIcon = forwardRef(({ as: As, label, boxSize = 10, ...rest }, ref) => {
+    const theme = useTheme();
+    
+    return (
+        <WrapItem>
+            <Tooltip label={label} fontSize='xs' color={theme.colors.body}>
+                <span ref={ref}>
+                    <Icon as={As} label={label} boxSize={boxSize} {...rest} />
+                </span>
+            </Tooltip>
+        </WrapItem>
+    );
+});
+
+export { H1, H2, H3, L1, L2, Body, KeyProjBlock, ProjBlock, CVBlock, TooltipIcon };
