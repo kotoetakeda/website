@@ -61,14 +61,14 @@ const StepperElem = ({ steps, handleStepClick, activeStep }) => {
               <StepIndicator>
                 <StepStatus
                   complete={<StepIcon />}
-                  active={<StepNumber color={'teal'} fontWeight={'bold'} />}
+                  active={<StepNumber color={'teal'} fontWeight={'900'} />}
                   incomplete={<StepNumber />}
                 />
               </StepIndicator>
 
               <StepTitle
                 color={index === activeStep ? "teal" : index < activeStep ? "teal" : colors.body_inactive}
-                fontWeight={index === activeStep ? "bold" : index < activeStep ? "normal" : "normal"}
+                fontWeight={index === activeStep ? "900" : index < activeStep ? "normal" : "normal"}
                 fontSize={isSticky ? 'sm' : 'lg'} // Adjust text size based on scroll position
               >
                 {step.title}
