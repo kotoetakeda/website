@@ -4,7 +4,7 @@ import { Box, Flex, Image } from "@chakra-ui/react";
 import { H2, Body } from "./Custom";
 import Header from './Header';
 import Footer from './Footer';
-import profile from "./mongo.JPG";
+import profile from "./image/mongo.JPG";
 
 const Homepage = () => {
 
