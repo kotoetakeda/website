@@ -22,6 +22,7 @@ const customTheme = extendTheme({
     mauve: "#DED3DE",
     navy: "#454447",
     body: "rgba(0, 0, 0, 0.9)",
+    body_inactive: "rgba(0, 0, 0, 0.4)",
     gradient: "linear-gradient(45deg, #C2EDEA 0%, #DED3DE 95%)",
   },
 });

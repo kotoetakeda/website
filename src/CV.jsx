@@ -1,7 +1,7 @@
 import React from "react";
 import { textDecoration, useTheme } from "@chakra-ui/react"; 
 import { Box, Flex, HStack, Divider, Text, Image, UnorderedList, ListItem } from "@chakra-ui/react";
-import { H1, H2, H3, L1, Body, CVBlock } from "./Fonts";
+import { H1, H2, H3, L1, Body, CVBlock } from "./Custom";
 import Header from './Header';
 import Footer from './Footer';
 

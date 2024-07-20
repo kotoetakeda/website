@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useTheme } from "@chakra-ui/react"; 
 import { Box, Flex, Input, FormControl, Textarea, Button, useToast } from "@chakra-ui/react";
-import { H1, Body } from "./Fonts";
+import { H1, Body } from "./Custom";
 import Header from './Header';
 import Footer from './Footer';
 import emailjs from "emailjs-com";

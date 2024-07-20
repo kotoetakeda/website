@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from "@chakra-ui/react"; 
 import { Box, Flex, HStack, Divider, Text, Image, Icon } from "@chakra-ui/react";
-import { H1, H2, L1, Body } from "./Fonts";
+import { H1, H2, L1, Body } from "./Custom";
 import { customTheme } from "./index";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
