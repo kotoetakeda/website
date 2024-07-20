@@ -4,7 +4,6 @@ import { Box, Flex, Wrap } from "@chakra-ui/react";
 import { H1, KeyProjBlock, ProjBlock } from "./Custom";
 import Header from './Header';
 import Footer from './Footer';
-import profile from "./mongo.JPG";
 
 const Project = () => {
 

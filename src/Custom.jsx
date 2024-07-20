@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { useTheme } from "@chakra-ui/react"; 
-import { Text, Flex, Image, Box, WrapItem } from "@chakra-ui/react";
-import { BrowserRouter as Router, NavLink } from 'react-router-dom';
+import { Text, Flex, Box, WrapItem } from "@chakra-ui/react";
+import { NavLink } from 'react-router-dom';
 
 const H1 = ({ text, ...rest }) => {
     const theme = useTheme();
@@ -153,12 +153,16 @@ const ProjBlock = ({ link, title, themeColor, ...rest }) => {
 const CVBlock = ({ company, location, position, time, description, ...rest }) => {
     const theme = useTheme();
     return (
-        <Box display={'grid'} gridTemplateColumns={'repeat(2, 35% 65%)'}>
-            <Flex borderRight={'1px solid'} borderRightColor={theme.colors.body} p={"1rem"} justify={'right'} align={'top'} flexDirection={'column'} textAlign={'right'}>
+        <Box display={'grid'} gridTemplateColumns={'repeat(2, 35% 65%)'} gridTemplateRows={'repeat(2, 10% 90%)'}>
+            <Flex gridColumn={'1 / 2'} gridRow={'1 / 2'} px={'5'} pt={'6'}
+                borderRight={'1px solid'} borderRightColor={theme.colors.body} 
+                justify={'right'} align={'top'} flexDirection={'column'} textAlign={'right'}>
                 <L1 text={company} fontWeight={'700'}/>
                 <Body text={location} />
             </Flex>
-            <Flex mt={"6rem"} mb={"1rem"} p={"1rem"} align={'top'} flexDirection={'column'}>
+            <Flex gridColumn={'1 / 2'} gridRow={'2 / 3'} 
+                borderRight={'1px solid'} borderRightColor={theme.colors.body} />
+            <Flex gridColumn={'2 / 3'} gridRow={'2 / 3'} align={'top'} flexDirection={'column'} px={'5'} pb={'6'}>
                 <Body text={position} fontWeight={'700'} />
                 <Text fontSize={'md'} m={'1'} >{time}</Text>
                 <Box my={'5'} mx={'1'} fontSize={'xl'}>{description}</Box>
