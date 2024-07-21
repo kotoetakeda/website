@@ -1,9 +1,10 @@
 import React from "react";
 import { useTheme } from "@chakra-ui/react"; 
 import { Box, Flex, Wrap } from "@chakra-ui/react";
-import { H1, ProjBlock } from "./Custom";
+import { H1, ProjBlock, SvgIcon, ReactIcon } from "./Custom";
 import Header from './Header';
 import Footer from './Footer';
+import Icons from './Icons';
 
 const Project = () => {
 
@@ -16,10 +17,35 @@ const Project = () => {
         <Flex bg={colors.white} w={'100%'} height={'fit-content'} py={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
           <H1 text="Projects Gallery" pb={"3rem"}/>
           <Wrap>
-            <ProjBlock title="SAQ Assistant" link="/saq-assistant" themeColor="#D6D6D6" />
-            <ProjBlock title="360Med" link="/" themeColor="#D6D6D6" />
-            <ProjBlock title="Healthcare Technology" link="/" themeColor="#D6D6D6" />
-            <ProjBlock title="The MARTA" link="/" themeColor="#D6D6D6" />
+            <ProjBlock 
+              title="SAQ Assistant" 
+              link="/saq-assistant" 
+              themeColor="#D6D6D6" 
+              desc={"A RAG-based generative AI chatbot"}
+              skills={ 
+                <>
+                <SvgIcon as={Icons.Python} label={'Python'} />
+                <SvgIcon as={Icons.JS} label={'JavaScript'} />
+                <SvgIcon as={Icons.Java} label={'Java'} />
+                <SvgIcon as={Icons.Cplusplus} label={'C++'} />
+                <SvgIcon as={Icons.C} label={'C'} />
+                <SvgIcon as={Icons.Typescript} label={'TypeScript'} />
+                <SvgIcon as={Icons.Swift} label={'Swift'} />
+                <SvgIcon as={Icons.HTML} label={'HTML'} />
+                <SvgIcon as={Icons.CSS} label={'CSS'} />
+                <SvgIcon as={Icons.Next} label={'Next.js'} />
+                <SvgIcon as={Icons.ReactSvg} label={'React'} />
+                <SvgIcon as={Icons.Bootstrap} label={'Bootstrap'} />
+                <SvgIcon as={Icons.Angular} label={'Angular'} />
+                <SvgIcon as={Icons.Node} label={'Node.js'} />
+                <SvgIcon as={Icons.D3} label={'D3.js'} />
+                <ReactIcon as={Icons.Flask} label={'Flask'} />
+                <SvgIcon as={Icons.MySQL} label={'MySQL'} />
+                </>
+              } />
+            <ProjBlock title="360Med" link="/" themeColor="#D6D6D6" desc={"A web application for medical databases"}/>
+            <ProjBlock title="Healthcare Technology" link="/" themeColor="#D6D6D6" desc={"A color-changing LED light to prevent hospital waste"}/>
+            <ProjBlock title="The MARTA" link="/" themeColor="#D6D6D6" desc={"Research into the MARTA System"}/>
           </Wrap>
         </Flex>
     </Box>

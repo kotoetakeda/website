@@ -1,6 +1,6 @@
 import React, { forwardRef, useState, useCallback } from "react";
 import { useTheme } from "@chakra-ui/react"; 
-import { Text, Flex, Box, WrapItem, Tooltip, Image, Icon } from "@chakra-ui/react";
+import { Text, Flex, Box, WrapItem, Tooltip, Image, Icon , Wrap} from "@chakra-ui/react";
 import { NavLink, useNavigate } from 'react-router-dom';
 
 const H1 = ({ text, ...rest }) => {
@@ -88,7 +88,7 @@ const Body = ({ text, ...rest }) => {
     );
 };
 
-const ProjBlock = ({ link, title, themeColor, ...rest }) => {
+const ProjBlock = ({ link, title, themeColor, desc, skills, ...rest }) => {
     const theme = useTheme();
     const [hover, setHover] = useState(false);
     const navigate = useNavigate();
@@ -105,18 +105,20 @@ const ProjBlock = ({ link, title, themeColor, ...rest }) => {
                 onClick={navigatePage}
             >
                 <Flex
-                    width={'20rem'}
-                    height={'20rem'}
+                    width={'80vw'}
+                    height={'40vh'}
+                    flexDirection={'column'}
                     bg={theme.colors.gray}
                     boxShadow={ hover ? "1px 1px 30px" + themeColor : "1px 1px 10px" + themeColor }
-                    align={'center'}
                     justify={'center'}
                     mb={'1rem'}
                     {...rest}
                 >
-                </Flex>
-                <L1 link={link} text={title} fontWeight={'900'} 
+                    <L1 link={link} text={title} fontWeight={'900'} 
                     color={hover ? theme.colors.body : theme.colors.body_inactive}/>
+                    <Body text={desc}/>
+                    <Wrap>{skills}</Wrap>
+                </Flex>
             </Flex>
         </WrapItem>
     );

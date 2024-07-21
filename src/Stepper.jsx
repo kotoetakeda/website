@@ -43,7 +43,7 @@ const StepperElem = ({ steps, handleStepClick, activeStep }) => {
         bg={colors.white}
         position={'sticky'}
         top={'0'}
-        mb={'10'}
+        m={'10'}
         zIndex={1000}
         justify={'center'}
         align={'center'}
