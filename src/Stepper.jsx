@@ -47,6 +47,7 @@ const StepperElem = ({ steps, handleStepClick, activeStep }) => {
         zIndex={1000}
         justify={'center'}
         align={'center'}
+        boxShadow={ isSticky ? "0px 4px 2px -2px rgba(0, 0, 0, 0.1)" : 'none' }
       >
         <Stepper
           size={isSticky ? 'sm' : 'lg'}
@@ -69,7 +70,7 @@ const StepperElem = ({ steps, handleStepClick, activeStep }) => {
               <StepTitle
                 color={index === activeStep ? "teal" : index < activeStep ? "teal" : colors.body_inactive}
                 fontWeight={index === activeStep ? "900" : index < activeStep ? "normal" : "normal"}
-                fontSize={isSticky ? 'sm' : 'lg'} // Adjust text size based on scroll position
+                fontSize={isSticky ? 'sm' : 'lg'}
               >
                 {step.title}
               </StepTitle>
