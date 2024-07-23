@@ -26,29 +26,6 @@ const SAQ = () => {
     count: steps.length,
   });
 
-  const stepContent = [
-    {
-      heading: 'Research',
-      description: 'Research phase involves gathering information and understanding the problem space.'
-    },
-    {
-      heading: 'Ideation',
-      description: 'Ideation phase focuses on brainstorming and generating possible solutions.'
-    },
-    {
-      heading: 'Design',
-      description: 'Design phase is where the solution is crafted and planned in detail.'
-    },
-    {
-      heading: 'Development',
-      description: 'Development phase involves coding and building the solution.'
-    },
-    {
-      heading: 'Reflection',
-      description: 'Reflection phase is about reviewing and learning from the process.'
-    }
-  ];
-
   useEffect(() => {
     const handleScroll = debounce(() => {
       const scrollPosition = window.scrollY;

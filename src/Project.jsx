@@ -26,21 +26,11 @@ const Project = () => {
                 <>
                 <SvgIcon as={Icons.Python} label={'Python'} />
                 <SvgIcon as={Icons.JS} label={'JavaScript'} />
-                <SvgIcon as={Icons.Java} label={'Java'} />
-                <SvgIcon as={Icons.Cplusplus} label={'C++'} />
-                <SvgIcon as={Icons.C} label={'C'} />
-                <SvgIcon as={Icons.Typescript} label={'TypeScript'} />
-                <SvgIcon as={Icons.Swift} label={'Swift'} />
                 <SvgIcon as={Icons.HTML} label={'HTML'} />
                 <SvgIcon as={Icons.CSS} label={'CSS'} />
-                <SvgIcon as={Icons.Next} label={'Next.js'} />
                 <SvgIcon as={Icons.ReactSvg} label={'React'} />
-                <SvgIcon as={Icons.Bootstrap} label={'Bootstrap'} />
-                <SvgIcon as={Icons.Angular} label={'Angular'} />
                 <SvgIcon as={Icons.Node} label={'Node.js'} />
-                <SvgIcon as={Icons.D3} label={'D3.js'} />
                 <ReactIcon as={Icons.Flask} label={'Flask'} />
-                <SvgIcon as={Icons.MySQL} label={'MySQL'} />
                 </>
               } />
             <ProjBlock title="360Med" link="/" themeColor="#D6D6D6" desc={"A web application for medical databases"}/>

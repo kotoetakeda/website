@@ -107,17 +107,22 @@ const ProjBlock = ({ link, title, themeColor, desc, skills, ...rest }) => {
                 <Flex
                     width={'80vw'}
                     height={'40vh'}
-                    flexDirection={'column'}
+                    flexDirection={'row'}
                     bg={theme.colors.gray}
                     boxShadow={ hover ? "1px 1px 30px" + themeColor : "1px 1px 10px" + themeColor }
                     justify={'center'}
                     mb={'1rem'}
                     {...rest}
                 >
-                    <L1 link={link} text={title} fontWeight={'900'} 
-                    color={hover ? theme.colors.body : theme.colors.body_inactive}/>
-                    <Body text={desc}/>
-                    <Wrap>{skills}</Wrap>
+                    <Box>
+                        <L1 link={link} text={title} fontWeight={'900'} 
+                        color={hover ? theme.colors.body : theme.colors.body_inactive}/>
+                        <Body text={desc}/>
+                        <Wrap>{skills}</Wrap>
+                    </Box>
+                    <Box>
+                        <Image src={""} alt={"SAQ Assistant Image"} />
+                    </Box>
                 </Flex>
             </Flex>
         </WrapItem>
