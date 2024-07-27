@@ -1,6 +1,6 @@
 import React, { forwardRef, useState, useCallback } from "react";
 import { useTheme } from "@chakra-ui/react"; 
-import { Text, Flex, Box, WrapItem, Tooltip, Image, Icon , Wrap} from "@chakra-ui/react";
+import { Text, Flex, Box, WrapItem, Tooltip, Image, Icon , Wrap, Center } from "@chakra-ui/react";
 import { NavLink, useNavigate } from 'react-router-dom';
 
 const H1 = ({ text, ...rest }) => {
@@ -88,7 +88,7 @@ const Body = ({ text, ...rest }) => {
     );
 };
 
-const ProjBlock = ({ link, title, themeColor, desc, skills, ...rest }) => {
+const ProjBlock = ({ link, title, themeColor, desc, skills, image, ...rest }) => {
     const theme = useTheme();
     const [hover, setHover] = useState(false);
     const navigate = useNavigate();
@@ -98,34 +98,29 @@ const ProjBlock = ({ link, title, themeColor, desc, skills, ...rest }) => {
     const navigatePage = useCallback(() => navigate(link), [navigate, link]);
 
     return (
-        <WrapItem>
-            <Flex flexDirection={'column'} justify={'center'} textAlign={'center'} m={'3rem'}
-                onMouseOver={handleMouseOver}
-                onMouseOut={handleMouseOut}
-                onClick={navigatePage}
-            >
-                <Flex
-                    width={'80vw'}
-                    height={'40vh'}
-                    flexDirection={'row'}
-                    bg={theme.colors.gray}
-                    boxShadow={ hover ? "1px 1px 30px" + themeColor : "1px 1px 10px" + themeColor }
-                    justify={'center'}
-                    mb={'1rem'}
-                    {...rest}
-                >
-                    <Box>
-                        <L1 link={link} text={title} fontWeight={'900'} 
-                        color={hover ? theme.colors.body : theme.colors.body_inactive}/>
-                        <Body text={desc}/>
-                        <Wrap>{skills}</Wrap>
-                    </Box>
-                    <Box>
-                        <Image src={""} alt={"SAQ Assistant Image"} />
-                    </Box>
-                </Flex>
+        <Box textAlign={'center'} m={'3rem'}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+            onClick={navigatePage}
+            width={'80vw'}
+            height={'40vh'}
+            flexDirection={'row'}
+            bg={theme.colors.gray}
+            boxShadow={ hover ? "1px 1px 30px" + themeColor : "1px 1px 10px" + themeColor }
+            display={'grid'}
+            gridTemplateColumns={'repeat(2, 1fr)'}
+            position={'relative'}
+            {...rest}
+        >
+            <Flex flexDirection={'column'} align={'center'} justify={'center'} rowGap={'5'} opacity={hover ? '1' : '0.5'}>
+                <H2 link={link} text={title} fontWeight={'900'} />
+                <Body text={desc}/>
+                <Wrap>{skills}</Wrap>
             </Flex>
-        </WrapItem>
+            <Center opacity={hover ? '1' : '0.5'}>
+                <Image src={image} alt={title}  height={'35vh'} />
+            </Center>
+        </Box>
     );
 };
 
@@ -139,7 +134,7 @@ const CVBlock = ({ company, location, position, time, description, ...rest }) =>
                 <L1 text={company} fontWeight={'700'}/>
                 <Body text={location} />
             </Flex>
-            <Flex gridColumn={'1 / 2'} gridRow={'2 / 3'} 
+            <Flex gridColumn={'1 / 2'} gridRow={'2 / 3'} {...rest}
                 borderRight={'1px solid'} borderRightColor={theme.colors.body} />
             <Flex gridColumn={'2 / 3'} gridRow={'2 / 3'} align={'top'} flexDirection={'column'} px={'5'} pb={'6'}>
                 <Body text={position} fontWeight={'700'} />
