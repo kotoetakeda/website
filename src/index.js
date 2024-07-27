@@ -7,7 +7,7 @@ const customTheme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: "#DED3DE",
+        bg: "#F5F5F5",
         color: "rgba(0, 0, 0, 0.9)",
         fontFamily: "forum, serif",
         fontSize: "10px",
