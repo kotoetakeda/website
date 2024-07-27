@@ -88,7 +88,7 @@ const Body = ({ text, ...rest }) => {
     );
 };
 
-const ProjBlock = ({ link, title, themeColor, desc, skills, image, ...rest }) => {
+const ProjBlock = ({ link, title, themeColor, date, desc, skills, image, ...rest }) => {
     const theme = useTheme();
     const [hover, setHover] = useState(false);
     const navigate = useNavigate();
@@ -102,25 +102,21 @@ const ProjBlock = ({ link, title, themeColor, desc, skills, image, ...rest }) =>
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
             onClick={navigatePage}
-            width={'80vw'}
+            width={'35vw'}
             height={'40vh'}
             flexDirection={'row'}
             bg={theme.colors.gray}
             boxShadow={ hover ? "1px 1px 30px" + themeColor : "1px 1px 10px" + themeColor }
-            display={'grid'}
-            gridTemplateColumns={'repeat(2, 1fr)'}
             position={'relative'}
             {...rest}
         >
             <Flex flexDirection={'column'} align={'center'} justify={'center'} 
                     rowGap={'5'} p={'10'}>
                 <H2 link={link} text={title} fontWeight={'900'} />
+                <i><Body text={date} color={theme.colors.body_inactive}/></i>
                 <Body text={desc}/>
                 <HStack>{skills}</HStack>
             </Flex>
-            <Center>
-                <Image src={image} alt={title}  height={'35vh'} />
-            </Center>
         </Box>
     );
 };
