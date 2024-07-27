@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTheme } from "@chakra-ui/react"; 
 import { Box, Flex } from "@chakra-ui/react";
-import { H1, ProjBlock, SvgIcon, ReactIcon } from "./Custom";
+import { H1, ProjBlock, SkillTag } from "./Custom";
 import Header from './Header';
 import Footer from './Footer';
-import Icons from './Icons';
 import SAQAssistantCover from './image/medCover.png';
 import MedCover from './image/medCover.png';
 import HTCover from './image/medCover.png';
@@ -14,6 +13,11 @@ const Project = () => {
 
   const theme = useTheme();
   const colors = theme.colors;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
     <Header />
@@ -27,13 +31,9 @@ const Project = () => {
             desc={"A RAG-based generative AI chatbot"}
             skills={ 
               <>
-              <SvgIcon as={Icons.Python} label={'Python'} />
-              <SvgIcon as={Icons.JS} label={'JavaScript'} />
-              <SvgIcon as={Icons.HTML} label={'HTML'} />
-              <SvgIcon as={Icons.CSS} label={'CSS'} />
-              <SvgIcon as={Icons.ReactSvg} label={'React'} />
-              <SvgIcon as={Icons.Node} label={'Node.js'} />
-              <ReactIcon as={Icons.Flask} label={'Flask'} />
+              <SkillTag label={'UX Research'} bg={colors.mauve} />
+              <SkillTag label={'UI Design'} bg={colors.cyan} />
+              <SkillTag label={'Frontend Development'} bg={colors.white} border={'1px solid rgba(0, 0, 0, 0.1)'} />
               </>
             } 
             image={SAQAssistantCover}
@@ -46,13 +46,9 @@ const Project = () => {
             desc={"A web application for medical databases"}
             skills={ 
               <>
-              <SvgIcon as={Icons.Python} label={'Python'} />
-              <SvgIcon as={Icons.JS} label={'JavaScript'} />
-              <SvgIcon as={Icons.HTML} label={'HTML'} />
-              <SvgIcon as={Icons.CSS} label={'CSS'} />
-              <SvgIcon as={Icons.ReactSvg} label={'React'} />
-              <SvgIcon as={Icons.Node} label={'Node.js'} />
-              <ReactIcon as={Icons.Flask} label={'Flask'} />
+              <SkillTag label={'UX Research'} bg={colors.mauve} />
+              <SkillTag label={'UI Design'} bg={colors.cyan} />
+              <SkillTag label={'Frontend Development'} bg={colors.white} border={'1px solid rgba(0, 0, 0, 0.1)'} />
               </>
             }
           />
@@ -64,13 +60,7 @@ const Project = () => {
             desc={"A color-changing LED light to prevent hospital waste"}
             skills={ 
               <>
-              <SvgIcon as={Icons.Python} label={'Python'} />
-              <SvgIcon as={Icons.JS} label={'JavaScript'} />
-              <SvgIcon as={Icons.HTML} label={'HTML'} />
-              <SvgIcon as={Icons.CSS} label={'CSS'} />
-              <SvgIcon as={Icons.ReactSvg} label={'React'} />
-              <SvgIcon as={Icons.Node} label={'Node.js'} />
-              <ReactIcon as={Icons.Flask} label={'Flask'} />
+              <SkillTag label={'UX Research'} bg={colors.mauve} />
               </>
             }
           />
@@ -82,13 +72,7 @@ const Project = () => {
             desc={"Research into the MARTA System"}
             skills={ 
               <>
-              <SvgIcon as={Icons.Python} label={'Python'} />
-              <SvgIcon as={Icons.JS} label={'JavaScript'} />
-              <SvgIcon as={Icons.HTML} label={'HTML'} />
-              <SvgIcon as={Icons.CSS} label={'CSS'} />
-              <SvgIcon as={Icons.ReactSvg} label={'React'} />
-              <SvgIcon as={Icons.Node} label={'Node.js'} />
-              <ReactIcon as={Icons.Flask} label={'Flask'} />
+              <SkillTag label={'UX Research'} bg={colors.mauve} />
               </>
             }
           />

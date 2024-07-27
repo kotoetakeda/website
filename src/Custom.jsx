@@ -1,6 +1,6 @@
 import React, { forwardRef, useState, useCallback } from "react";
 import { useTheme } from "@chakra-ui/react"; 
-import { Text, Flex, Box, WrapItem, Tooltip, Image, Icon , Wrap, Center } from "@chakra-ui/react";
+import { Text, Flex, Box, WrapItem, Tooltip, Image, Icon , HStack, Center, Button } from "@chakra-ui/react";
 import { NavLink, useNavigate } from 'react-router-dom';
 
 const H1 = ({ text, ...rest }) => {
@@ -112,12 +112,13 @@ const ProjBlock = ({ link, title, themeColor, desc, skills, image, ...rest }) =>
             position={'relative'}
             {...rest}
         >
-            <Flex flexDirection={'column'} align={'center'} justify={'center'} rowGap={'5'} opacity={hover ? '1' : '0.5'}>
+            <Flex flexDirection={'column'} align={'center'} justify={'center'} 
+                    rowGap={'5'} p={'10'}>
                 <H2 link={link} text={title} fontWeight={'900'} />
                 <Body text={desc}/>
-                <Wrap>{skills}</Wrap>
+                <HStack>{skills}</HStack>
             </Flex>
-            <Center opacity={hover ? '1' : '0.5'}>
+            <Center>
                 <Image src={image} alt={title}  height={'35vh'} />
             </Center>
         </Box>
@@ -171,4 +172,31 @@ const ReactIcon = forwardRef(({ as: As, label, boxSize = '2rem', ...rest }, ref)
     );
 });
 
-export { H1, H2, H3, L1, L2, Body, ProjBlock, CVBlock, SvgIcon, ReactIcon };
+const SkillTag = ({ label, bg, ...rest }) => {
+    return (
+        <Center
+            borderRadius={'12'}
+            bg={bg}
+            py={'1'}
+            px={'3'}
+            fontSize={'xs'}
+            {...rest}
+        >
+            {label}
+        </Center>
+    )
+}
+
+const CustomButton = ({ label, ...rest }) => {
+    const theme = useTheme();
+    return (
+        <Button bg={theme.colors.body} color={theme.colors.white} 
+                px={'20'} py={'2'} m={'3'} 
+                _hover={{bg: theme.colors.gradient, color: theme.colors.body}}
+                {...rest} > 
+            {label}
+        </Button>
+    )
+}
+
+export { H1, H2, H3, L1, L2, Body, ProjBlock, CVBlock, SvgIcon, ReactIcon, SkillTag, CustomButton };

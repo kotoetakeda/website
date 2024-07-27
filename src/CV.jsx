@@ -1,6 +1,6 @@
-import React from "react";
-import { useTheme, Box, Flex, UnorderedList, ListItem, Wrap } from "@chakra-ui/react";
-import { H1, H3, Body, CVBlock, SvgIcon, ReactIcon } from "./Custom";
+import React, { useCallback, useEffect } from "react";
+import { useTheme, Box, Flex, UnorderedList, ListItem, Wrap, Link } from "@chakra-ui/react";
+import { H1, H3, Body, CVBlock, SvgIcon, ReactIcon, CustomButton } from "./Custom";
 import Header from './Header';
 import Footer from './Footer';
 import Icons from './Icons';
@@ -8,16 +8,25 @@ import Icons from './Icons';
 const CV = () => {
   const theme = useTheme();
   const colors = theme.colors;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const resumeUrl = `${process.env.PUBLIC_URL}/Kotoe_Takeda_Resume.pdf`
+  const openResume = useCallback(() => window.open(resumeUrl, "_blank", "noopener,noreferrer"));
   
   return (
     <>
       <Header />
       <Box p={"3rem 5rem"} w={'100%'} bg={colors.gradient}>
         <Flex bg={colors.white} w={'100%'} height={'fit-content'} py={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
-          <H1 text="Curriculum Vitae" pb={"3rem"} />
+          <H1 text="Curriculum Vitae" pb={"1rem"} />
+          <CustomButton label={'Download Resume'} mb={"3rem"} onClick={openResume} />
           
           <Box w={"90%"} bg={colors.gray} p={"2rem"}>
             <H3 text={'SKILLS'} mb={"2rem"} />
+
             <Body text={'Technical Skills: '}/>
             <Wrap spacing={'3'} my={'5'}>
               {/* Programming */}

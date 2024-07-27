@@ -25,7 +25,10 @@ const SAQ = () => {
     index: 0,
     count: steps.length,
   });
-
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
   useEffect(() => {
     const handleScroll = debounce(() => {
       const scrollPosition = window.scrollY;

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTheme } from "@chakra-ui/react"; 
-import { Box, Flex, Input, FormControl, Textarea, Button, useToast } from "@chakra-ui/react";
-import { H1, Body } from "./Custom";
+import { Box, Flex, Input, FormControl, Textarea, useToast } from "@chakra-ui/react";
+import { H1, Body, CustomButton } from "./Custom";
 import Header from './Header';
 import Footer from './Footer';
 import emailjs from "emailjs-com";
@@ -10,6 +10,10 @@ const Contact = () => {
 
   const theme = useTheme();
   const colors = theme.colors;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -98,11 +102,7 @@ const Contact = () => {
                     onChange={handleChange} />
                 </FormControl>
               </Flex>
-              <Button bg={colors.body} type="submit" 
-                color={colors.white} px={'20'} py={'2'} m={'3'} 
-                _hover={{bg: colors.gradient, color: colors.body}}> 
-                Send
-              </Button>
+              <CustomButton label={'Send'} type={'submit'}/>
             </form>
           </Box>
         </Flex>

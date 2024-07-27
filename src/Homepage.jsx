@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTheme } from "@chakra-ui/react"; 
 import { Box, Flex, Image } from "@chakra-ui/react";
 import { H2, Body } from "./Custom";
@@ -10,6 +10,10 @@ const Homepage = () => {
 
   const theme = useTheme();
   const colors = theme.colors;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
