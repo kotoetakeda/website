@@ -4,10 +4,6 @@ import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
 import { H1, ProjBlock, SkillTag } from "./Custom";
 import Header from './Header';
 import Footer from './Footer';
-import SAQAssistantCover from './image/medCover.png';
-import MedCover from './image/medCover.png';
-import HTCover from './image/medCover.png';
-import MartaCover from './image/medCover.png';
 
 const Project = () => {
 
@@ -27,11 +23,11 @@ const Project = () => {
         <SimpleGrid columns={2}> 
             <ProjBlock 
               title="SAQ Assistant" 
-              link="/saq-assistant" 
-              themeColor="#D6D6D6"
+              link="/saq-assistant"
+              themeColor={colors.gray}
               date={"Jun 2024 - Aug 2024"}
               desc={"A RAG-based generative AI chatbot"}
-              skills={ 
+              skills={
                 <>
                 <SkillTag label={'UX Research'} bg={colors.mauve} />
                 <SkillTag label={'UI Design'} bg={colors.cyan} />
@@ -42,7 +38,7 @@ const Project = () => {
             <ProjBlock 
               title="360Med" 
               link="/360med" 
-              themeColor="#D6D6D6" 
+              themeColor={colors.gray}
               date={"Aug 2023 - Dec 2023"}
               desc={"A web application for medical databases"}
               skills={ 
@@ -56,7 +52,7 @@ const Project = () => {
             <ProjBlock 
               title="The MARTA" 
               link="/marta" 
-              themeColor="#D6D6D6" 
+              themeColor={colors.gray} 
               date={"May 2023 - Aug 2023"}
               desc={"Research into the MARTA System"}
               skills={ 
@@ -68,7 +64,7 @@ const Project = () => {
             <ProjBlock 
               title="Healthcare Technology" 
               link="/healthcare-technology" 
-              themeColor="#D6D6D6"
+              themeColor={colors.gray}
               date={"Aug 2021 - May 2022"} 
               desc={"A color-changing LED light to prevent hospital waste"}
               skills={ 

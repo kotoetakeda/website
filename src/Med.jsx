@@ -9,7 +9,7 @@ import StepperElem from './Stepper';
 import Icons from './Icons';
 import debounce from 'lodash.debounce';
 
-const SAQ = () => {
+const Med = () => {
   const theme = useTheme();
   const colors = theme.colors;
 
@@ -29,7 +29,7 @@ const SAQ = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
-
+  
   useEffect(() => {
     const handleScroll = debounce(() => {
       const scrollPosition = window.scrollY;
@@ -65,18 +65,22 @@ const SAQ = () => {
       <Header />
       <Box p={"3rem 5rem"} w={'100%'} bg={colors.gradient}>
         <Flex bg={colors.white} w={'100%'} height={'fit-content'} py={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
-          <H1 text="SAQ Assistant" />
+          <H1 text="360Med" />
           <i><Body text={"\"We've been waiting for a tool like this for so long! This will significantly boost our productivity!\" - user"} my={'2rem'}/></i>
           <Box width={"70vw"} display={'grid'} my={'2rem'}>
             <H3 text={"Overview"}/>
-            <Body text={"SAQ Assistant is a RAG-based generative AI chatbot web application specifically tailored for an internal team at Insight Enterprises, Inc."} />
+            <Body text={"Neurotime is a research lab based in Azerbaijan focused on creating " +
+            "products based on Natural Language Processing (NLP) technologies. For their first product, " +
+            "they are creating a full media management suite. This is a continuation of their initial project " +
+            "done by another team. This project is a focus on the social/online media intelligence system while " +
+            "the one prior was on the stream analysis."} />
           </Box>
           <Box width={"70vw"} display={'grid'} gridTemplateColumns={'repeat(2, 25% 70%)'} gap={'5%'}>
             <Box>
               <Box my={'2rem'}>
                 <H3 text={"My Roles"}/>
-                <Body text={"UX Research"} />
                 <Body text={"UI Design"} />
+                <Body text={"UX Research"} />
                 <Body text={"Frontend Development"} />
               </Box>
               <Box my={'2rem'}>
@@ -104,11 +108,11 @@ const SAQ = () => {
             <Box>
               <Box my={'2rem'}>
                 <H3 text={"The Challenge"}/>
-                <Body text={
-                  `Users had to answer questionnaires based on documents, some containing over 300 questions. 
-                  This process was highly time-consuming. The existing workflow required users to flip through 
-                  multiple documents to find answers, adding to the complexity. Furthermore, many questions across 
-                  different questionnaires were similar, leading to redundant searches and further increasing the time spent.`} />
+                <Body text={"Neurotime is a research lab based in Azerbaijan focused on creating " +
+                  "products based on Natural Language Processing (NLP) technologies. For their first product, " +
+                  "they are creating a full media management suite. This is a continuation of their initial project " +
+                  "done by another team. This project is a focus on the social/online media intelligence system while " +
+                  "the one prior was on the stream analysis."} />
               </Box>
               <Box my={'2rem'} width={'100%'}>
                 <H3 text={"The Solution"}/>
@@ -222,4 +226,4 @@ const SAQ = () => {
   );
 };
 
-export default SAQ;
+export default Med;
