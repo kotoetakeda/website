@@ -76,6 +76,7 @@ const Contact = () => {
                 <FormControl id="name" isRequired>
                 <Input 
                   placeholder={'Full Name*'} 
+                  borderRadius={'0'}
                   type="text" name="name"
                   value={formData.name}
                   size={"lg"} m={'3'} 
@@ -85,6 +86,7 @@ const Contact = () => {
                 <FormControl id="email" isRequired>
                   <Input
                     placeholder={'Email*'}
+                    borderRadius={'0'}
                     type="email" name="email"
                     size={"lg"} m={'3'}
                     value={formData.email}
@@ -96,6 +98,7 @@ const Contact = () => {
                 <FormControl id="message">
                   <Textarea 
                     placeholder={'Message'} name="message"
+                    borderRadius={'0'}
                     value={formData.message}
                     size={"lg"} m={'3'} h={'30vh'} 
                     borderColor={colors.body} focusBorderColor={colors.cyan}

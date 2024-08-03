@@ -17,6 +17,7 @@ const customTheme = extendTheme({
   },
   colors: {
     white: "#F5F5F5",
+    white_inactive: "rgba(250, 250, 250, 0.7)",
     gray: "#F0F0F0",
     cyan: "#C2EDEA",
     mauve: "#DED3DE",
