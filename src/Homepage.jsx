@@ -22,15 +22,14 @@ const Homepage = () => {
         <Box bg={colors.white} w={'100%'} display={'grid'} gridTemplateColumns={'repeat(3, 1fr)'} h={'fit-content'}>
             <Image src={profile} alt='profile image' h={'auto'} w={'auto'} gridColumn={'1 / 2'} bg="grey"></Image>
             <Flex h={'100%'} w={'100%'} gridColumn={'2 / 4'} p={"5rem"} flexDirection={'column'} align={'start'} justify={'center'}>
-                <H2 text="Hello, I'm Kotoe" pb="2rem" />
-                <Body 
-                    text="As a software engineer, frontend developer, and UX designer, 
-                    I specialize in blending technical prowess with user-centered design principles. 
-                    My interdisciplinary skills enable me to foster seamless collaboration between design 
-                    and development teams, driving innovation and enhancing product development processes. 
-                    By crafting intuitive and efficient solutions that prioritize user experience while 
-                    ensuring technical feasibility, I deliver enhanced user satisfaction and substantial 
-                    value to employers." />
+                <H2 text="Hello, I'm Kotoe" />
+                <Body pt={"1rem"} text={"Software Engineer · Frontend Developer · UX Developer · UX Designer "} />
+                <Body pt={"1rem"}
+                    text="I am passionate about designing meaningful experiences that seamlessly and aesthetically integrate into 
+                    people’s lives, transforming the way we interact with technology. My greatest motivation comes from listening 
+                    to users’ needs and their requests for improvements, and there’s nothing more rewarding than hearing their words 
+                    of satisfaction afterward. I am constantly driven by a desire to learn and grow, always seeking out new knowledge 
+                    and innovative ways to enhance my skills both as a designer and a developer." />
             </Flex>
         </Box>
     </Box>
