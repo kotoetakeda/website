@@ -29,7 +29,7 @@ const HT = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
-  
+
   useEffect(() => {
     const handleScroll = debounce(() => {
       const scrollPosition = window.scrollY;
@@ -76,7 +76,7 @@ const HT = () => {
             "the one prior was on the stream analysis."} />
           </Box>
           <Box width={"70vw"} display={'grid'} gridTemplateColumns={'repeat(2, 25% 70%)'} gap={'5%'}>
-            <Box>
+            <Flex flexDirection={'column'} >
               <Box my={'2rem'}>
                 <H3 text={"My Roles"}/>
                 <Body text={"UI Design"} />
@@ -103,9 +103,9 @@ const HT = () => {
                 <H3 text={"Project Duration"}/>
                 <Body text={"10 weeks"} />
               </Box>
-            </Box>
+            </Flex>
 
-            <Box>
+            <Flex flexDirection={'column'} justify={'space-between'} >
               <Box my={'2rem'}>
                 <H3 text={"The Challenge"}/>
                 <Body text={"Neurotime is a research lab based in Azerbaijan focused on creating " +
@@ -122,7 +122,7 @@ const HT = () => {
                   "done by another team. This project is a focus on the social/online media intelligence system while " +
                   "the one prior was on the stream analysis."} />
               </Box>
-            </Box>
+            </Flex>
             
           </Box>
           

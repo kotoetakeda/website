@@ -4,8 +4,8 @@ import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
 import { H1, ProjBlock, SkillTag } from "./Custom";
 import Header from './Header';
 import Footer from './Footer';
-import SAQCover from './image/SAQCover.png'
-import medCover from './image/medCover.png'
+import SAQCover from './image/SAQCover.png';
+import medCover from './image/medCover.png';
 
 const Project = () => {
 
@@ -29,7 +29,7 @@ const Project = () => {
               themeColor={"linear-gradient(45deg, rgba(174, 10, 70, 0.8) 0%, rgba(168, 11, 110, 0.8) 30%, rgba(88, 40, 115, 0.8) 75%)"}
               darkMode={true}
               date={"Jun 2024 - Aug 2024"}
-              desc={"A RAG-based generative AI chatbot"}
+              desc={"A RAG-based generative AI chatbot web application"}
               skills={
                 <>
                 <SkillTag label={'UX Research'} bg={colors.mauve} />
@@ -42,7 +42,7 @@ const Project = () => {
             <ProjBlock 
               title="360Med" 
               link="/360med" 
-              themeColor={"linear-gradient(45deg, #FFFEF2 0%, #c2edce 80%, #6fb3b8 95%)"}
+              themeColor={"linear-gradient(45deg, #FFFEF2 0%, #c2edce 30%, #6fb3b8 75%)"}
               darkMode={false}
               date={"Aug 2023 - Dec 2023"}
               desc={"A web application for medical databases"}
