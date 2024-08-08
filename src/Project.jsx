@@ -26,7 +26,7 @@ const Project = () => {
             <ProjBlock 
               title="SAQ Assistant" 
               link="/saq-assistant"
-              themeColor={"linear-gradient(45deg, rgba(174, 10, 70, 0.8) 0%, rgba(168, 11, 110, 0.8) 30%, rgba(88, 40, 115, 0.8) 75%)"}
+              themeColor={"linear-gradient(45deg, rgba(174, 10, 70, 0.8) 0%, rgba(168, 11, 110, 0.8) 50%, rgba(88, 40, 115, 0.8) 75%)"}
               darkMode={true}
               date={"Jun 2024 - Aug 2024"}
               desc={"A RAG-based generative AI chatbot web application"}
@@ -42,7 +42,7 @@ const Project = () => {
             <ProjBlock 
               title="360Med" 
               link="/360med" 
-              themeColor={"linear-gradient(45deg, #FFFEF2 0%, #c2edce 30%, #6fb3b8 75%)"}
+              themeColor={"linear-gradient(45deg, #FFFEF2 0%, #c2edce 50%, #6fb3b8 75%)"}
               darkMode={false}
               date={"Aug 2023 - Dec 2023"}
               desc={"A web application for medical databases"}

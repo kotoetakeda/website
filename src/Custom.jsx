@@ -176,7 +176,7 @@ const ReactIcon = forwardRef(({ as: As, label, boxSize = '2rem', ...rest }, ref)
 const SkillTag = ({ label, bg, ...rest }) => {
     return (
         <Center
-            borderRadius={'12'}
+            borderRadius={'0'}
             bg={bg}
             py={'1'}
             px={'3'}

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useTheme } from "@chakra-ui/react";
-import { Box, Flex, Wrap, Image, Center } from "@chakra-ui/react";
+import { Box, Flex, Wrap } from "@chakra-ui/react";
 import { H1, H2, H3, Body, SvgIcon, ReactIcon } from "./Custom";
 import Header from './Header';
 import Footer from './Footer';
@@ -8,8 +8,6 @@ import { useSteps } from '@chakra-ui/react';
 import StepperElem from './Stepper';
 import Icons from './Icons';
 import debounce from 'lodash.debounce';
-import SAQCover from './image/SAQCover.png';
-import InsightLogo from './image/InsightLogo.png';
 
 const SAQ = () => {
   const theme = useTheme();
@@ -66,27 +64,27 @@ const SAQ = () => {
     <>
       <Header />
       <Box p={"3rem 5rem"} w={'100%'} bg={colors.gradient}>
-        <Flex bg={colors.white} w={'100%'} height={'fit-content'} pb={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
-          <Center width={'100%'} height={'40vmin'} bg={"#FFFFFF"} >
-            <Image src={InsightLogo} alt={'SAQ Assistant Cover'} width={'auto'} height={'20vmin'}/>
-          </Center>
+        <Flex bg={colors.white} w={'100%'} height={'fit-content'} py={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
           <H1 text="SAQ Assistant" pt={'2rem'} />
           <i><Body text={"\"We've been waiting for a tool like this for so long! This will significantly boost our productivity!\" - user"} my={'2rem'}/></i>
           <Box width={"70vw"} display={'grid'} my={'2rem'}>
             <H3 text={"Overview"}/>
-            <Body text={"SAQ Assistant is a RAG-based generative AI chatbot web application specifically tailored for an internal team at Insight Enterprises, Inc."} />
+            <Body text={
+              `SAQ Assistant is a RAG-based generative AI chatbot web application designed to streamline and expedite 
+              the completion of Security Assessment Questionnaires (SAQs) by providing users with consistency, efficiency, 
+              and effortlessness in the process.`} />
           </Box>
-          <Box width={"70vw"} display={'grid'} gridTemplateColumns={'repeat(2, 25% 70%)'} gap={'5%'}>
-            <Flex flexDirection={'column'}>
-              <Box my={'2rem'}>
+          <Box width={"70vw"} display={'grid'} gridTemplateRows={'repeat(2, 25% 72%)'} gap={'3%'}>
+            <Box display="grid" gridTemplateColumns="repeat(3, 1fr)" columnGap="5%">
+              <Box my={'2rem'} textAlign={'center'}>
                 <H3 text={"My Roles"}/>
                 <Body text={"UX Research"} />
                 <Body text={"UI Design"} />
                 <Body text={"Frontend Development"} />
               </Box>
-              <Box my={'2rem'}>
+              <Box my={'2rem'} textAlign={'center'}>
                 <H3 text={"Skills"}/>
-                <Wrap>
+                <Wrap textAlign={'center'}>
                   <ReactIcon as={Icons.Mural} label={'Mural'} />
                   <SvgIcon as={Icons.Figma} label={'Figma'} />
                   <SvgIcon as={Icons.Python} label={'Python'} />
@@ -100,11 +98,11 @@ const SAQ = () => {
                   <SvgIcon as={Icons.Jira} label={'Jira'} />
                 </Wrap>
               </Box>
-              <Box my={'2rem'}>
+              <Box my={'2rem'} textAlign={'center'}>
                 <H3 text={"Project Duration"}/>
                 <Body text={"10 weeks"} />
               </Box>
-            </Flex>
+            </Box>
 
             <Flex flexDirection={'column'} justify={'space-between'} >
               <Box my={'2rem'}>
@@ -129,11 +127,13 @@ const SAQ = () => {
               </Box>
               <Box my={'2rem'} width={'100%'}>
                 <H3 text={"The Solution"}/>
-                <Body text={"Neurotime is a research lab based in Azerbaijan focused on creating " +
-                  "products based on Natural Language Processing (NLP) technologies. For their first product, " +
-                  "they are creating a full media management suite. This is a continuation of their initial project " +
-                  "done by another team. This project is a focus on the social/online media intelligence system while " +
-                  "the one prior was on the stream analysis."} />
+                <Body text={
+                  `We presented to our user, Insight’s SAQ team, a RAG-based generative AI chatbot web application tailored specifically 
+                  to their needs. This tool is designed to seamlessly integrate with their current workflow, providing a centralized 
+                  platform that contains all SAQ-specific documents required to answer the questionnaire questions. The web application 
+                  includes intuitive features that enable users to easily navigate and reference different documents based on the context 
+                  of the questions. Our goal is for this application to become the primary resource for the SAQ team, significantly 
+                  streamlining the process and enhancing efficiency in completing their tasks.`} />
               </Box>
             </Flex>
             
@@ -145,12 +145,10 @@ const SAQ = () => {
           <Box key={'0'} id={steps['0'].id} width={"70vw"} my={'3rem'} justify={'center'}>
             <H2 text={'Research'} />
             <Box my={'2rem'} width={'100%'}>
-              <H3 text={"The Solution"}/>
-              <Body text={"Neurotime is a research lab based in Azerbaijan focused on creating " +
-                "products based on Natural Language Processing (NLP) technologies. For their first product, " +
-                "they are creating a full media management suite. This is a continuation of their initial project " +
-                "done by another team. This project is a focus on the social/online media intelligence system while " +
-                "the one prior was on the stream analysis."} />
+              <H3 text={"Kickoff and Stakeholder Meeting"}/>
+              <Body text={`Our team started off with a meeting in order to go over the project plan and familiarize ourselves with the product. 
+                            It was a lot of information thrown in our direction and I asked the client questions to clarify their goals for 
+                            the social/online media intelligence system.`} />
             </Box>
             <Box my={'2rem'} width={'100%'}>
               <H3 text={"The Solution"}/>
