@@ -67,24 +67,28 @@ const SAQ = () => {
         <Flex bg={colors.white} w={'100%'} height={'fit-content'} py={"5rem"} flexDirection={'column'} justify={'center'} align={'center'}>
           <H1 text="SAQ Assistant" pt={'2rem'} />
           <i><Body text={"\"We've been waiting for a tool like this for so long! This will significantly boost our productivity!\" - user"} my={'2rem'}/></i>
-          <Box width={"70vw"} display={'grid'} my={'2rem'}>
+          {/* <Box width={"70vw"} display={'grid'} my={'2rem'}>
             <H3 text={"Overview"}/>
             <Body text={
               `SAQ Assistant is a RAG-based generative AI chatbot web application designed to streamline and expedite 
               the completion of Security Assessment Questionnaires (SAQs) by providing users with consistency, efficiency, 
               and effortlessness in the process.`} />
-          </Box>
-          <Box width={"70vw"} display={'grid'} gridTemplateRows={'repeat(2, 25% 72%)'} gap={'3%'}>
-            <Box display="grid" gridTemplateColumns="repeat(3, 1fr)" columnGap="5%">
-              <Box my={'2rem'} textAlign={'center'}>
+          </Box> */}
+          <Box width={"70vw"} display={'grid'} gridTemplateColumns={'repeat(2, 25% 72%)'} my={'2rem'} gap={'3%'}>
+            <Flex flexDirection={"column"} gap={"2vmin"}>
+              <Box my={'2rem'} textAlign={'left'}>
                 <H3 text={"My Roles"}/>
                 <Body text={"UX Research"} />
                 <Body text={"UI Design"} />
                 <Body text={"Frontend Development"} />
               </Box>
-              <Box my={'2rem'} textAlign={'center'}>
+              <Box my={'2rem'} textAlign={'left'}>
+                <H3 text={"Project Duration"}/>
+                <Body text={"10 weeks"} />
+              </Box>
+              <Box my={'2rem'} textAlign={'left'}>
                 <H3 text={"Skills"}/>
-                <Wrap textAlign={'center'}>
+                <Wrap textAlign={'left'}>
                   <ReactIcon as={Icons.Mural} label={'Mural'} />
                   <SvgIcon as={Icons.Figma} label={'Figma'} />
                   <SvgIcon as={Icons.Python} label={'Python'} />
@@ -98,11 +102,7 @@ const SAQ = () => {
                   <SvgIcon as={Icons.Jira} label={'Jira'} />
                 </Wrap>
               </Box>
-              <Box my={'2rem'} textAlign={'center'}>
-                <H3 text={"Project Duration"}/>
-                <Body text={"10 weeks"} />
-              </Box>
-            </Box>
+            </Flex>
 
             <Flex flexDirection={'column'} justify={'space-between'} >
               <Box my={'2rem'}>

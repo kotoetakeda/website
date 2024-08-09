@@ -16,8 +16,8 @@ function App() {
     <ChakraProvider theme={customTheme}>
         <BrowserRouter>
         <Routes>
-            <Route path="/home" element={<Homepage />} />
-            <Route path="/project" element={<Project />} />
+            <Route path="/about" element={<Homepage />} />
+            <Route path="/home" element={<Project />} />
             <Route path="/cv" element={<CV />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/saq-assistant" element={<SAQ />} />

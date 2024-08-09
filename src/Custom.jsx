@@ -98,31 +98,24 @@ const ProjBlock = ({ link, title, darkMode, themeColor, date, desc, skills, imag
     const navigatePage = useCallback(() => navigate(link), [navigate, link]);
 
     return (
-        <Box textAlign={'center'} m={'3rem'}
+        <Flex textAlign={'center'}
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
             onClick={navigatePage}
-            width={'70vw'}
-            height={'40vh'}
-            flexDirection={'row'}
-            bg={themeColor}
+            width={'50vmin'}
+            height={'50vmin'}
             boxShadow={ hover ? "1px 1px 30px #D6D6D6" : "1px 1px 10px #D6D6D6" }
             position={'relative'}
+            flexDirection={"column"}
             {...rest}
-            display={'grid'}
-            gridTemplateColumns={'repeat(2, 1fr)'}
         >
-            <Flex flexDirection={'column'} align={'center'} justify={'center'} 
-                    rowGap={'5'} p={'10'}>
+            <Image src={image} alt={title}/>
+            <Flex justify={'space-evenly'} align={'center'} flexDirection={"column"} gap={"2"} height={"100%"}>
+                <Body text={"Web Application"}/>
                 <H2 link={link} text={title} fontWeight={'900'} color={ darkMode ? theme.colors.white : theme.colors.body } />
                 <i><Body text={date} color={ darkMode ? theme.colors.white_inactive : theme.colors.body_inactive } /></i>
-                <Body text={desc} color={ darkMode ? theme.colors.white : theme.colors.body } />
-                <HStack>{skills}</HStack>
             </Flex>
-            <Flex flexDirection={'column'} align={'center'} justify={'center'}>
-                <Image src={image} width={'auto'} height={'30vmin'} alt={title + " Cover Image"}/>
-            </Flex>
-        </Box>
+        </Flex>
     );
 };
 
@@ -152,7 +145,7 @@ const SvgIcon = forwardRef(({ as: As, label, ...rest }, ref) => {
 
     return (
         <WrapItem>
-            <Tooltip label={label} fontSize='xs' color={theme.colors.body}>
+            <Tooltip label={label} fontSize='xs' color={theme.colors.body} bg={theme.colors.white}>
                 <Image as={As} alt={label} width={'2rem'} height={'2rem'} {...rest} />
             </Tooltip>
         </WrapItem>
@@ -164,7 +157,7 @@ const ReactIcon = forwardRef(({ as: As, label, boxSize = '2rem', ...rest }, ref)
     
     return (
         <WrapItem>
-            <Tooltip label={label} fontSize='xs' color={theme.colors.body}>
+            <Tooltip label={label} fontSize='xs' color={theme.colors.body} bg={theme.colors.white}>
                 <span ref={ref}>
                     <Icon as={As} label={label} boxSize={boxSize} {...rest} />
                 </span>
