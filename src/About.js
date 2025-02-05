@@ -5,7 +5,7 @@ import Profile_About from "./images/profile-about.jpg";
 
 const About = () => {
 
-  const SectionFont = "text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl header font-semibold no-underline pt-60 pb-30";
+  const SectionFont = "text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl header font-semibold no-underline pt-60 mb-30";
   const ProjTitle = "text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl header font-normal no-underline";
   const ProjDesc = "text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl header font-normal no-underline";
   
@@ -15,7 +15,7 @@ const About = () => {
         <div className="flex flex-col flex-1">
 
           {/* Intro */}
-          <div className="flex flex-1 items-center gap-5 px-30">
+          <div className="flex flex-1 items-center mx-40 mt-16">
             <div className="flex flex-1 flex-col gap-3">
               <p className={ProjTitle} >Nice to meet you! <span className={` ${ProjTitle} waving-hand`}>&#128075;</span> </p>
               <p className={ProjDesc}> 
@@ -27,7 +27,7 @@ const About = () => {
             </div>
             {/* Profile Pic */}
             <div className="flex flex-1 items-center justify-end">
-              <img className="object-cover rounded-full w-100" src={Profile_About} alt="A picture of me"/>
+              <img className="object-cover rounded-full w-4/5" src={Profile_About} alt="A picture of me"/>
             </div>
           </div>
         </div>

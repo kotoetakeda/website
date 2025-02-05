@@ -6,7 +6,7 @@ const Footer = () => {
   const FooterFont = "text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl header font-normal no-underline text-stone-950";
 
   return (
-    <div className="flex justify-center items-center gap-7 mt-50">
+    <div className="flex justify-center items-center gap-7 pt-60">
         <p className={FooterFont} >Reach out to me here</p>
         <p className={FooterFont} >&mdash;</p>
         {/* Email Icon with Link */}
